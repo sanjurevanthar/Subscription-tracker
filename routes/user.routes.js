@@ -4,7 +4,7 @@ import authorize from "../middlewares/authorize.middleware.js";
 
 const userRouter = Router();
 
-userRouter.get('/', getUsers );
+userRouter.get('/', authorize, getUsers );
 
 userRouter.get('/:id', authorize , getUser);
 
